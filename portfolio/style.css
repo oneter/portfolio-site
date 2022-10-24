@@ -1,0 +1,413 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+a {
+    color: inherit;
+}
+
+/*-------------ШРИФТЫ------------------------------------------------------------------------*/
+@font-face {
+    font-family: 'GilroyM';
+    src: local('Gilroy Medium'), local('Gilroy-Medium'),
+        url('/source/fonts/Gilroy-Medium.woff2') format('woff2'),
+        url('/source/fonts/Gilroy-Medium.woff') format('woff'),
+        url('/source/fonts/Gilroy-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GilroyB';
+    src: local('Gilroy Bold'), local('Gilroy-Bold'),
+        url('/source/fonts/Gilroy-Bold.woff2') format('woff2'),
+        url('/source/fonts/Gilroy-Bold.woff') format('woff'),
+        url('/source/fonts/Gilroy-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/*-------------ОБЩЕЕ------------------------------------------------------------------------*/
+body {
+    font-family: "GilroyB";
+    font-size: 18px;
+    line-height: 120%;
+}
+
+.wrapper {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+._container {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width:767px) {
+    ._container {
+        width: 100%;
+        padding: 0 29px;
+    }
+}
+
+._ibg {
+    position: relative;
+}
+
+._ibg img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+/*---------------MENU----------------------------------------------------------------------*/
+.menu__container {
+    border-bottom: 1px solid #828282;
+}
+
+.menu-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 32px 0;
+}
+
+.menu-list li:first-child a {
+    color: black;
+}
+
+.menu-list li:not(:first-child) a {
+    color: #828282;
+}
+
+@media screen and (max-width:480px) {
+    .menu-list li {
+        font-size: 34px;
+        line-height: 120%;
+    }
+
+    .menu-list {
+        flex-direction: column;
+    }
+}
+
+/*---------------FIRST----------------------------------------------------------------------*/
+
+.first-block__container {
+    position: relative;
+}
+
+.first-block-text {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name {
+    margin: 30px 0 0 0;
+    font-size: 47.3392px;
+    line-height: 59px;
+}
+
+.work {
+    margin: 95px 0 0 0;
+    font-family: "GilroyM";
+}
+
+.lang {
+    padding: 120px 55px 0 0;
+    font-size: 16px;
+    transform: rotate(-90deg);
+}
+
+.lang span {
+    color: #828282;
+}
+
+.photo {
+    margin: 50px 0 104px 0;
+    width: 940px;
+    height: 387px;
+    /*background: url(photo1.jpg) 0 -450px/940px auto no-repeat;*/
+}
+
+@media screen and (max-width:480px) {
+    .lang {
+        display: none;
+    }
+
+    .first-block-text {
+        flex-direction: column;
+    }
+
+    .work {
+
+        margin: 23px 0 0 0;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .photo {
+        height: 478px;
+        width: 100%;
+        /*background: url(photo1.jpg) 0 0/auto 478px no-repeat;*/
+        margin: 50px auto 104px auto;
+    }
+}
+
+/*---------------SECOND----------------------------------------------------------------------*/
+.second-block {
+    background: #F6F6F6;
+    padding: 120px 0 107px 0;
+}
+
+.second-block p {
+    font-family: "GilroyM";
+    text-align: center;
+}
+
+.second-block p:not(:last-child) {
+    margin-bottom: 51px;
+}
+
+.second-block-title {
+    text-align: center;
+    font-size: 34px;
+    margin: 0 0 18px 0;
+}
+
+/*---------------THIRD----------------------------------------------------------------------*/
+.third-block {
+    padding: 91px 0 110px 0;
+}
+
+.third-block-title {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 69px;
+}
+
+.third-block p {
+    text-align: center;
+    margin-bottom: 84px;
+    font-family: "GilroyM";
+}
+
+.progs {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width:767px) {
+    .progs {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .prog {
+        margin: auto;
+    }
+
+    .prog:not(:last-child) {
+        margin-bottom: 81px;
+    }
+}
+
+.prog {
+    word-wrap: break-word;
+
+}
+
+.prog-logo {
+    margin-left: 40px;
+}
+
+.prog h2 {
+    font-size: 14px;
+    color: #828282;
+    text-align: center;
+    margin: 24px 0 40px 0;
+}
+
+.progs .prog:nth-child(4) h2 {
+    margin: 24px 0 60px 0;
+}
+
+.progs .prog:nth-child(4) .prog-logo {
+    margin-left: 52px;
+}
+
+.stars {
+    display: flex;
+    justify-content: space-between;
+    width: 166px;
+}
+
+/*---------------Fourth----------------------------------------------------------------------*/
+.fourth-block {
+    padding: 112px 0 96px 0;
+    background: #F6F6F6;
+}
+
+.fourth-block-link {
+    display: block;
+    font-family: "GloryM";
+    text-decoration: underline;
+    text-align: center;
+}
+
+.fourth-block div:not(:last-child) {
+    padding-bottom: 99px;
+}
+
+.fourth-block-title {
+    text-align: center;
+    margin-bottom: 47px;
+}
+
+.fourth-block img {
+    display: block;
+    margin-bottom: 44px;
+    object-fit: cover;
+    width: 100%;
+}
+
+@media screen and (max-width:767px) {
+    .fourth-block img {
+        margin: 0 auto 44px;
+        object-fit: cover;
+    }
+}
+
+/*---------FIFTH-----------------------------------------------------------------------------------*/
+.fifth-block {
+    text-align: center;
+    padding: 114px 0 123px 0;
+}
+
+.fifth-block h2 {
+    font-size: 34px;
+    margin: 0 0 20px 0;
+}
+
+.fifth-block p {
+    font-family: 'GilroyM';
+}
+
+.fifth-block p:last-child {
+    font-size: 14px;
+    color: #828282;
+    margin: 45px 0 0 0;
+}
+
+.send_button {
+    color: white;
+    display: inline-block;
+    height: 42px;
+    padding: 10px 28px 10px 28px;
+    background-color: black;
+    border-radius: 24px;
+    margin: 30px 0 86px 0;
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    width: 342px;
+    margin: auto;
+}
+
+@media screen and (max-width:767px) {
+
+    .fifth-block p:last-child {
+        font-size: 18px;
+    }
+}
